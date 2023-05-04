@@ -74,6 +74,11 @@ class quizPageState extends State<QuizPage> {
     Navigator.push(context, MaterialPageRoute(builder: (context) => QuizApp()));
   }
 
+  // TODO: 関数にする
+  Future<void> updataQuiz(BuildContext context) async {
+    await Future.delayed(const Duration(seconds: 1));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,14 +105,16 @@ class quizPageState extends State<QuizPage> {
                     height: 120,
                     padding: EdgeInsets.all(8),
                     child: GestureDetector(
-                      onTap: () {
+                      onTap: () async {
                         final audio = AudioCache();
                         if (quizList[index]["answer"][0]["isCorrect"] == true) {
                           if (index == 4) {
                             audio.play('sara.mp3');
+                            await Future.delayed(const Duration(seconds: 1));
                             goTop(context);
                           } else {
                             audio.play('correct.mp3');
+                            await Future.delayed(const Duration(seconds: 1));
                             setState(() {
                               index++;
                             });
@@ -128,14 +135,16 @@ class quizPageState extends State<QuizPage> {
                     height: 120,
                     padding: EdgeInsets.all(8),
                     child: GestureDetector(
-                      onTap: () {
+                      onTap: () async {
                         final audio = AudioCache();
                         if (quizList[index]["answer"][1]["isCorrect"] == true) {
                           if (index == 4) {
                             audio.play('sara.mp3');
+                            await Future.delayed(const Duration(seconds: 1));
                             goTop(context);
                           } else {
                             audio.play('correct.mp3');
+                            await Future.delayed(const Duration(seconds: 1));
                             setState(() {
                               index++;
                             });
@@ -156,14 +165,16 @@ class quizPageState extends State<QuizPage> {
                     height: 120,
                     padding: EdgeInsets.all(8),
                     child: GestureDetector(
-                      onTap: () {
+                      onTap: () async {
                         final audio = AudioCache();
                         if (quizList[index]["answer"][2]["isCorrect"] == true) {
                           if (index == 4) {
                             audio.play('sara.mp3');
+                            await Future.delayed(const Duration(seconds: 1));
                             goTop(context);
                           } else {
                             audio.play('correct.mp3');
+                            await Future.delayed(const Duration(seconds: 1));
                             setState(() {
                               index++;
                             });
