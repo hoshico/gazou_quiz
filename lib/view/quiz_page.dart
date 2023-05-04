@@ -87,7 +87,6 @@ class quizPageState extends State<QuizPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Container(
-            //child: Text("アンパンマンはどれかな？",
             child: Text(quizList[index]["question"],
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
           ),
