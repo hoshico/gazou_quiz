@@ -64,6 +64,22 @@ flutter:
     - assets/images/anpanman02.png
     - assets/images/anpanman03.png
     - assets/images/anpanman04.png
+    - assets/images/mimomo01.jpg
+    - assets/images/mimomo02.jpg
+    - assets/images/mimomo03.png
+    - assets/images/mimomo04.jpg
+    - assets/images/papa01.jpg
+    - assets/images/papa02.jpg
+    - assets/images/papa03.jpg
+    - assets/images/papa04.png
+    - assets/images/mama01.jpg
+    - assets/images/mama02.jpg
+    - assets/images/mama03.jpg
+    - assets/images/mama04.jpg
+    - assets/images/sara01.jpg
+    - assets/images/sara02.jpg
+    - assets/images/sara03.jpg
+    - assets/images/sara04.jpg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
