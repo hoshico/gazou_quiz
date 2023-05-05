@@ -17,28 +17,30 @@ class QuizApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.amber[50],
         body: Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Transform.rotate(
-            angle: 10 * math.pi / 180,
-            child: Icon(Icons.question_mark, color: Colors.pink, size: 44.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Transform.rotate(
+                angle: 10 * math.pi / 180,
+                child:
+                    Icon(Icons.question_mark, color: Colors.pink, size: 44.0),
+              ),
+              const Text(
+                'ホンモノどれかな〜',
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
+              ),
+              ElevatedButton(
+                  onPressed: () async {
+                    final audio = AudioCache();
+                    audio.play('start.mp3');
+                    await Future.delayed(const Duration(seconds: 1));
+                    goToQuizApp(context);
+                  },
+                  child: const Text('スタート')),
+            ],
           ),
-          const Text(
-            'ホンモノわかるかな〜',
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
-          ),
-          ElevatedButton(
-              onPressed: () async {
-                final audio = AudioCache();
-                audio.play('start.mp3');
-                await Future.delayed(const Duration(seconds: 1));
-                goToQuizApp(context);
-              },
-              child: const Text('スタート')),
-        ],
-      ),
-    ));
+        ));
   }
 }

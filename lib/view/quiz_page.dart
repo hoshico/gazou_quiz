@@ -82,119 +82,130 @@ class quizPageState extends State<QuizPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.amber[50],
         body: Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Container(
-            child: Text(quizList[index]["question"],
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-          ),
-          Container(
-            width: 100,
-            child: Image.asset(quizList[index]["questionImage"]),
-          ),
-          Container(
-            child: Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    width: 120,
-                    height: 120,
-                    padding: EdgeInsets.all(8),
-                    child: GestureDetector(
-                      onTap: () async {
-                        final audio = AudioCache();
-                        if (quizList[index]["answer"][0]["isCorrect"] == true) {
-                          if (index == 4) {
-                            audio.play('sara.mp3');
-                            await Future.delayed(const Duration(seconds: 1));
-                            goTop(context);
-                          } else {
-                            audio.play('correct.mp3');
-                            await Future.delayed(const Duration(seconds: 1));
-                            setState(() {
-                              index++;
-                            });
-                          }
-                        } else {
-                          audio.play('uncorrect.mp3');
-                        }
-                      },
-                      child: Container(
-                          padding: const EdgeInsets.all(8),
-                          color: Colors.teal[100],
-                          child: Image.asset(
-                              quizList[index]["answer"][0]["answerImage"])),
-                    ),
-                  ),
-                  Container(
-                    width: 120,
-                    height: 120,
-                    padding: EdgeInsets.all(8),
-                    child: GestureDetector(
-                      onTap: () async {
-                        final audio = AudioCache();
-                        if (quizList[index]["answer"][1]["isCorrect"] == true) {
-                          if (index == 4) {
-                            audio.play('sara.mp3');
-                            await Future.delayed(const Duration(seconds: 1));
-                            goTop(context);
-                          } else {
-                            audio.play('correct.mp3');
-                            await Future.delayed(const Duration(seconds: 1));
-                            setState(() {
-                              index++;
-                            });
-                          }
-                        } else {
-                          audio.play('uncorrect.mp3');
-                        }
-                      },
-                      child: Container(
-                          padding: const EdgeInsets.all(8),
-                          color: Colors.teal[100],
-                          child: Image.asset(
-                              quizList[index]["answer"][1]["answerImage"])),
-                    ),
-                  ),
-                  Container(
-                    width: 120,
-                    height: 120,
-                    padding: EdgeInsets.all(8),
-                    child: GestureDetector(
-                      onTap: () async {
-                        final audio = AudioCache();
-                        if (quizList[index]["answer"][2]["isCorrect"] == true) {
-                          if (index == 4) {
-                            audio.play('sara.mp3');
-                            await Future.delayed(const Duration(seconds: 1));
-                            goTop(context);
-                          } else {
-                            audio.play('correct.mp3');
-                            await Future.delayed(const Duration(seconds: 1));
-                            setState(() {
-                              index++;
-                            });
-                          }
-                        } else {
-                          audio.play('uncorrect.mp3');
-                        }
-                      },
-                      child: Container(
-                          padding: const EdgeInsets.all(8),
-                          color: Colors.teal[100],
-                          child: Image.asset(
-                              quizList[index]["answer"][2]["answerImage"])),
-                    ),
-                  ),
-                ],
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                child: Text(quizList[index]["question"],
+                    style:
+                        TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
               ),
-            ),
+              Container(
+                width: 100,
+                child: Image.asset(quizList[index]["questionImage"]),
+              ),
+              Container(
+                child: Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Container(
+                        width: 120,
+                        height: 120,
+                        padding: EdgeInsets.all(8),
+                        child: GestureDetector(
+                          onTap: () async {
+                            final audio = AudioCache();
+                            if (quizList[index]["answer"][0]["isCorrect"] ==
+                                true) {
+                              if (index == 4) {
+                                audio.play('sara.mp3');
+                                await Future.delayed(
+                                    const Duration(seconds: 1));
+                                goTop(context);
+                              } else {
+                                audio.play('correct.mp3');
+                                await Future.delayed(
+                                    const Duration(seconds: 1));
+                                setState(() {
+                                  index++;
+                                });
+                              }
+                            } else {
+                              audio.play('uncorrect.mp3');
+                            }
+                          },
+                          child: Container(
+                              padding: const EdgeInsets.all(8),
+                              color: Colors.teal[100],
+                              child: Image.asset(
+                                  quizList[index]["answer"][0]["answerImage"])),
+                        ),
+                      ),
+                      Container(
+                        width: 120,
+                        height: 120,
+                        padding: EdgeInsets.all(8),
+                        child: GestureDetector(
+                          onTap: () async {
+                            final audio = AudioCache();
+                            if (quizList[index]["answer"][1]["isCorrect"] ==
+                                true) {
+                              if (index == 4) {
+                                audio.play('sara.mp3');
+                                await Future.delayed(
+                                    const Duration(seconds: 1));
+                                goTop(context);
+                              } else {
+                                audio.play('correct.mp3');
+                                await Future.delayed(
+                                    const Duration(seconds: 1));
+                                setState(() {
+                                  index++;
+                                });
+                              }
+                            } else {
+                              audio.play('uncorrect.mp3');
+                            }
+                          },
+                          child: Container(
+                              padding: const EdgeInsets.all(8),
+                              color: Colors.teal[100],
+                              child: Image.asset(
+                                  quizList[index]["answer"][1]["answerImage"])),
+                        ),
+                      ),
+                      Container(
+                        width: 120,
+                        height: 120,
+                        padding: EdgeInsets.all(8),
+                        child: GestureDetector(
+                          onTap: () async {
+                            final audio = AudioCache();
+                            if (quizList[index]["answer"][2]["isCorrect"] ==
+                                true) {
+                              if (index == 4) {
+                                audio.play('sara.mp3');
+                                await Future.delayed(
+                                    const Duration(seconds: 1));
+                                goTop(context);
+                              } else {
+                                audio.play('correct.mp3');
+                                await Future.delayed(
+                                    const Duration(seconds: 1));
+                                setState(() {
+                                  index++;
+                                });
+                              }
+                            } else {
+                              audio.play('uncorrect.mp3');
+                            }
+                          },
+                          child: Container(
+                              padding: const EdgeInsets.all(8),
+                              color: Colors.teal[100],
+                              child: Image.asset(
+                                  quizList[index]["answer"][2]["answerImage"])),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
-    ));
+        ));
   }
 }
