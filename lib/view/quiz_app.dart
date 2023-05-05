@@ -32,6 +32,9 @@ class QuizApp extends StatelessWidget {
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
               ),
               ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.pink,
+                  ),
                   onPressed: () async {
                     final audio = AudioCache();
                     audio.play('start.mp3');
