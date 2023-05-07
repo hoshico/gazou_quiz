@@ -28,12 +28,16 @@ class QuizApp extends StatelessWidget {
                     Icon(Icons.question_mark, color: Colors.pink, size: 44.0),
               ),
               const Text(
-                'ホンモノどれかな〜',
+                'おいたん',
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
+              ),
+              const Text(
+                'ゲームコレクション２',
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
               ),
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.pink,
+                    backgroundColor: Colors.pink[200],
                   ),
                   onPressed: () async {
                     final audio = AudioCache();
