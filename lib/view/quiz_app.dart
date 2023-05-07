@@ -45,7 +45,7 @@ class QuizApp extends StatelessWidget {
                     await Future.delayed(const Duration(seconds: 1));
                     goToQuizApp(context);
                   },
-                  child: const Text('スタート')),
+                  child: const Text('ほんものどれかな？')),
             ],
           ),
         ));
